@@ -24,6 +24,7 @@ import (
 	"github.com/projectdiscovery/subfinder/v2/pkg/subscraping/sources/digitorus"
 	"github.com/projectdiscovery/subfinder/v2/pkg/subscraping/sources/dnsdb"
 	"github.com/projectdiscovery/subfinder/v2/pkg/subscraping/sources/dnsdumpster"
+	"github.com/projectdiscovery/subfinder/v2/pkg/subscraping/sources/dnshistory"
 	"github.com/projectdiscovery/subfinder/v2/pkg/subscraping/sources/dnsrepo"
 	"github.com/projectdiscovery/subfinder/v2/pkg/subscraping/sources/facebook"
 	"github.com/projectdiscovery/subfinder/v2/pkg/subscraping/sources/fofa"
@@ -66,6 +67,7 @@ var AllSources = [...]subscraping.Source{
 	&digitorus.Source{},
 	&dnsdb.Source{},
 	&dnsdumpster.Source{},
+	&dnshistory.Source{},
 	&dnsrepo.Source{},
 	&fofa.Source{},
 	&fullhunt.Source{},
