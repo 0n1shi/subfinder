@@ -30,6 +30,7 @@ func (s *Source) Run(ctx context.Context, domain string, session *subscraping.Se
 
 		page := 1
 		for {
+			time.Sleep(1 * time.Second)// to avoid cloudflare challenge
 			resp, err := session.SimpleGet(ctx, fmt.Sprintf("https://dnshistory.org/subdomains/%d/%s", page, domain))
 			if err != nil {
 				results <- subscraping.Result{Source: s.Name(), Type: subscraping.Error, Error: err}
